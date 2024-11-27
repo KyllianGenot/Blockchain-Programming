@@ -10,3 +10,6 @@
 [submodule "ERC20-223-721-TD/lib/forge-std"]
 	path = ERC20-223-721-TD/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "ERC20-223-721-TD/lib/openzeppelin-contracts"]
+	path = ERC20-223-721-TD/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
