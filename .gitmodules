@@ -1,0 +1,9 @@
+[submodule "ERC20-TD/lib/forge-std"]
+	path = ERC20-TD/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "ERC20-TD/lib/openzeppelin-contracts"]
+	path = ERC20-TD/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "ERC721-TD/lib/forge-std"]
+	path = ERC721-TD/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std

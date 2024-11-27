@@ -1,0 +1,46 @@
+# Ignore Foundry-specific directories and files
+/out
+/cache
+
+# Ignore compilation files and artifacts
+/artifacts
+/broadcast
+/cache
+/deployments
+*.sol.json
+
+# Ignore local configuration files
+.env
+*.local
+
+# Ignore log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore Node.js modules (if using npm/yarn)
+node_modules/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor-specific configuration files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore Solidity Coverage files (if using it)
+coverage/
+coverage.json
+.solcover.js
+.solcover.ts
+
+# Ignore test results and reports
+test-results/
+lcov-report/
+private_key.txt
