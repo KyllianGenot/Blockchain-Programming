@@ -13,3 +13,6 @@
 [submodule "ERC20-223-721-TD/lib/openzeppelin-contracts"]
 	path = ERC20-223-721-TD/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "ERC721-TD/lib/openzeppelin-contracts"]
+	path = ERC721-TD/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
