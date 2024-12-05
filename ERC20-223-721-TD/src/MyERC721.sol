@@ -2,10 +2,10 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC223/ERC223.sol";
-import "@openzeppelin/contracts/token/ERC223/IERC223.sol";
-import "@openzeppelin/contracts/token/ERC223/IERC223Recipient.sol";
-import "@openzeppelin/contracts/token/ERC223/Address.sol";
+import "./ERC223/ERC223.sol";
+import "./ERC223/IERC223.sol";
+import "./ERC223/IERC223Recipient.sol";
+import "./ERC223/Address.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MyERC721Token is ERC721 {
@@ -23,7 +23,7 @@ contract MyERC721Token is ERC721 {
 
     function mintWithERC20(uint256 amount, address _erc20Address) public {
         erc20 = ERC20(_erc20Address);
-        require(nextTokenId <= _totalSupply, "Max supply reached");
+        require(nextTokenId <= _totalSupply, "Total supply reached");
         uint256 cost = 100 * 10 ** erc20.decimals();
         require(erc20.balanceOf(msg.sender) >= cost * amount, "Not enough ERC20 tokens");
         erc20.transferFrom(msg.sender, contractOwner, cost * amount);
