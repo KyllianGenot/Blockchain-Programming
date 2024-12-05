@@ -82,7 +82,7 @@ forge script script/deployToken.sol --fork-url http://localhost:8545 --broadcast
 #### Deployment to Holesky Testnet:
 Deploy the ERC20 token contract to the Holesky test network:
 ```bash
-forge script script/deployToken.sol --broadcast --rpc-url $RPC_URL
+forge script script/deployToken.sol --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
 ```
 
 ---
