@@ -58,6 +58,12 @@ This guide explains how to set up and run the **ERC20-223-721-TD project**, deve
    # Navigate to the folder
    cd ERC20-223-721-TD
    ```
+3. **Set Up Environment Variables**  
+   Create a `.env` file in the root directory and add:
+   ```env
+   RPC_URL=<your_testnet_rpc_url>
+   PRIVATE_KEY=<your_private_key>
+   ```
 
 ---
 
@@ -88,7 +94,7 @@ forge build
 ### 3. **Deploy the Contracts**
 Run the deployment script:
 ```bash
-forge script script/Deploy.s.sol
+forge script script/Deploy.s.sol --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
 ```
 
 ### 4. **Run the Tests**
