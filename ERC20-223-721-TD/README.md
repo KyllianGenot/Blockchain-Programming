@@ -54,6 +54,9 @@ This guide explains how to set up and run the **ERC20-223-721-TD project**, deve
    
    # Pull the specified folder
    git checkout
+
+   # Navigate to the folder
+   cd ERC20-223-721-TD
    ```
 
 ---
