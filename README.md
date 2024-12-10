@@ -68,6 +68,34 @@ Refer to the detailed [ERC721-TD Guide](./ERC721-TD/README.md) for setup and exe
 
 ---
 
+### 4. **ERC721-UX: ERC721 Token Visualization and Manipulation**
+
+This project involves building a user-friendly React-based dApp for interacting with ERC721 tokens deployed on the **Holesky Testnet**. The application allows users to visualize and manipulate ERC721 tokens from **Fake BAYC**, **Fake Nefturians**, and **Fake Meebits** contracts.
+
+#### Features:
+- Connects to the **Holesky Testnet** via **Metamask**.
+- Displays ChainId, block number, and user address.
+- Provides functionality to claim, buy, and view token metadata (image and attributes).
+- Includes a minting function for selecting unminted tokens using signature data.
+
+📁 Folder: `ERC721-UX`
+- **`public/`**: Static assets and images.
+- **`src/abi/`**: ABIs for interacting with the ERC721 contracts.
+- **`src/pages/`**: React pages:
+   - `/chain-info`: Displays blockchain details.
+   - `/fakeBayc`: Displays collection and minting functionality.
+   - `/fakeBayc/{tokenId}`: Token metadata details.
+   - `/fakeNefturians`: Buy tokens.
+   - `/fakeNefturians/{userAddress}`: Tokens owned by a user.
+   - `/fakeMeebits`: Mint tokens with signature-based functionality.
+- **`src/components/`**: Reusable components.
+- **`src/data/`**: Utility functions for smart contract interactions.
+- **`App.js`**: Main React file.
+
+Refer to the detailed [ERC721-UX Guide](./erc721-ux/README.md) for setup and execution.
+
+---
+
 ## License
 
 This repository is licensed under the MIT License.
