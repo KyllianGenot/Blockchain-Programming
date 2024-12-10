@@ -1,0 +1,146 @@
+/* Glassmorphism styles for Fake BAYC page */
+.fakebayc-container {
+  background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Sora", sans-serif;
+}
+
+.fakebayc-title {
+  font-size: 36px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Glowing effect */
+  font-family: 'Sora', sans-serif;
+  margin-bottom: 20px;
+}
+
+.fakebayc-error {
+  color: red;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-family: 'Sora', sans-serif;
+}
+
+.fakebayc-info {
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 1.6;
+  font-family: 'Sora', sans-serif;
+}
+
+/* Updated Claim Button with Gradient, Glow, and Ripple Effect */
+.fakebayc-claim-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d3b6e0, #b58ed2); /* Gradient background */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Glow effect on hover */
+.fakebayc-claim-button:hover {
+  box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2; /* Gradient glow */
+  transform: translateY(-2px); /* Subtle lift */
+}
+
+/* Ripple effect */
+.fakebayc-claim-button::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s ease-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.fakebayc-claim-button:active::after {
+  opacity: 1;
+  transform: scale(4);
+}
+
+@keyframes ripple {
+  to {
+      transform: scale(12);
+      opacity: 0;
+  }
+}
+
+/* Focus Accessibility */
+.fakebayc-claim-button:focus {
+  outline: 2px solid #d2a6ed;
+  outline-offset: 3px;
+}
+
+/* Subtitle */
+.fakebayc-subtitle {
+  margin-top: 40px;
+  font-size: 24px;
+  font-family: 'Sora', sans-serif;
+}
+
+.fakebayc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.fakebayc-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fakebayc-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fakebayc-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.fakebayc-nft-name {
+  font-family: 'Sora', sans-serif;
+  font-size: 18px;
+  color: #D2A6ED;
+  margin: 10px 0;
+}
+
+.fakebayc-nft-id {
+  font-family: 'Sora', sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+.fakebayc-loading-text {
+  font-family: 'Sora', sans-serif;
+  font-size: 18px;
+  color: #ccc;
+}

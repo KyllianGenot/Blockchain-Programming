@@ -1,0 +1,163 @@
+/* Container principal */
+.fakenefturians-container {
+    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Sora", sans-serif;
+}
+
+/* Titre principal */
+.fakenefturians-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Sora', sans-serif;
+}
+
+/* Messages d'erreur et de succès */
+.fakenefturians-error {
+    color: #ff4d4d;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: 'Sora', sans-serif;
+}
+
+.fakenefturians-success {
+    color: #4caf50;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: 'Sora', sans-serif;
+}
+
+/* Informations du token */
+.fakenefturians-info {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Sora', sans-serif;
+}
+
+/* Updated Button with Gradient, Glow, and Ripple Effect */
+.fakenefturians-button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #d3b6e0, #b58ed2); /* Gradient background */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: "Sora", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Glow effect on hover */
+.fakenefturians-button:hover {
+    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2; /* Gradient glow */
+    transform: translateY(-2px); /* Subtle lift */
+}
+
+/* Ripple effect */
+.fakenefturians-button::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.fakenefturians-button:active::after {
+    opacity: 1;
+    transform: scale(4);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(12);
+        opacity: 0;
+    }
+}
+
+/* Focus Accessibility */
+.fakenefturians-button:focus {
+    outline: 2px solid #d2a6ed;
+    outline-offset: 3px;
+}
+
+/* Section de recherche */
+.fakenefturians-subtitle {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #A6C1ED;
+    font-family: 'Sora', sans-serif;
+}
+
+.fakenefturians-search {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.fakenefturians-input {
+    width: 300px;
+    padding: 10px 15px 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: "Sora", sans-serif;
+}
+
+.fakenefturians-input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 5px #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fakenefturians-container {
+        padding: 20px;
+    }
+
+    .fakenefturians-title {
+        font-size: 28px;
+    }
+
+    .fakenefturians-info {
+        font-size: 18px;
+    }
+
+    .fakenefturians-input {
+        width: 100%;
+    }
+
+    .fakenefturians-search {
+        flex-direction: column;
+    }
+
+    .fakenefturians-button {
+        width: 100%;
+    }
+}

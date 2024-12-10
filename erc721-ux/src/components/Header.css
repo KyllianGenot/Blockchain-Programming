@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Header styling */
+.header {
+    background-color: #151518; /* Solid modern luxurious dark color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Container for header content */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Navigation styling */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+/* Links */
+.nav-link {
+    text-decoration: none;
+    color: #ccc; /* Light gray color */
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative; /* To position pseudo-elements */
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: #fff; /* Bright white on hover */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+/* Active link */
+.nav-link.active {
+    color: #A6C1ED; /* Light blue color for active link */
+}
+
+/* Active and Hover underline effect */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #A6C1ED; /* Blue underline */
+    transition: width 0.3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    width: 100%; /* Underline grows on hover or active */
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    position: relative;
+    display: inline-block; /* Align with other links */
+}
+
+.dropdown > .nav-link {
+    padding: 8px 12px; /* Same as other links */
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Flèche dans le menu déroulant */
+.dropdown-arrow svg {
+    display: inline-block;
+    margin-left: 5px; /* Espacement entre le texte et la flèche */
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease; /* Transition douce pour la rotation */
+    fill: currentColor; /* Hérite de la couleur du texte */
+}
+
+/* Rotation de la flèche lorsque le menu est en hover */
+.dropdown:hover .dropdown-arrow svg {
+    transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align below the parent */
+    left: 0;
+    background-color: #151518;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    color: #ccc;
+    padding: 10px 12px;
+    display: block;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #222; /* Slightly lighter hover */
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .header-container {
+        justify-content: flex-start;
+    }
+}

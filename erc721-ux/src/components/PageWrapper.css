@@ -1,0 +1,10 @@
+/* Styles pour PageWrapper */
+.page-wrapper {
+  font-family: 'Clash Display', sans-serif;
+}
+  
+.page-main {
+  padding-top: 300px; /* Ajusté à la hauteur du header */
+  padding: 20px; /* Marges internes générales */
+}
+  

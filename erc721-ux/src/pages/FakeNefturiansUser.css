@@ -1,0 +1,112 @@
+/* Container principal */
+.fakenefturians-container {
+    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Sora", sans-serif;
+  }
+  
+  .fakenefturians-subtitle span {
+    color: #ffffff; /* Adresse en blanc */
+  }
+  
+  /* Grille des tokens */
+  .fakenefturians-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Carte individuelle d'un token */
+  .fakenefturians-card {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Image des tokens */
+  .fakenefturians-image {
+    width: 100%;
+    max-width: 150px; /* Taille réduite de l'image */
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+    border: 2px solid #D2A6ED;
+    box-shadow: 0 0 10px rgba(234, 68, 254, 0.5);
+  }
+  
+  /* Nom du NFT */
+  .fakenefturians-nft-name {
+    font-size: clamp(16px, 1.2vw, 18px);
+    color: #A6C1ED;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  /* Description */
+  .fakenefturians-description {
+    font-size: clamp(12px, 1vw, 14px);
+    color: #e7e7e7;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  /* Token ID */
+  .fakenefturians-tokenid {
+    font-size: clamp(12px, 1vw, 14px);
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  /* Aucun token */
+  .fakenefturians-no-tokens {
+    font-size: 18px;
+    color: #e0e0e0;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  /* Message d'erreur */
+  .fakenefturians-error {
+    color: #ff4d4d;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .fakenefturians-container {
+      padding: 20px;
+    }
+  
+    .fakenefturians-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .fakenefturians-title {
+      font-size: 28px;
+    }
+  
+    .fakenefturians-subtitle {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,0 +1,110 @@
+/* Glassmorphism styles for Chain Info page */
+.chain-info-container {
+    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Sora", sans-serif;
+}
+
+.chain-info-title {
+    font-size: 36px;
+    color: #ffffff;
+    font-family: 'Sora', sans-serif;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+    margin-bottom: 20px;
+}
+
+/* Updated Button with Gradient, Glow, and Ripple Effect */
+.chain-info-button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #d3b6e0, #b58ed2); /* Gradient background */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: "Sora", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Glow effect on hover */
+.chain-info-button:hover {
+    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2; /* Gradient glow */
+    transform: translateY(-2px); /* Subtle lift */
+}
+
+/* Ripple effect */
+.chain-info-button::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.chain-info-button:active::after {
+    opacity: 1;
+    transform: scale(4);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(12);
+        opacity: 0;
+    }
+}
+
+/* Focus Accessibility */
+.chain-info-button:focus {
+    outline: 2px solid #d2a6ed;
+    outline-offset: 3px;
+}
+
+.chain-info-details {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    text-align: left;
+    display: inline-block;
+    color: #fff;
+    font-family: 'Sora', sans-serif;
+}
+
+.chain-info-item {
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-shadow: 0 0px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Sora', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chain-info-container {
+        padding: 20px;
+    }
+
+    .chain-info-title {
+        font-size: 28px;
+    }
+
+    .chain-info-item {
+        font-size: 16px;
+    }
+}

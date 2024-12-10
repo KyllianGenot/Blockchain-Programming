@@ -1,0 +1,92 @@
+/* Container principal */
+.fakemeebits-container {
+    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Sora", sans-serif;
+  }
+  
+  .fakemeebits-title {
+    font-size: 36px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  .fakemeebits-error {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  .fakemeebits-success {
+    color: #28a745;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  .fakemeebits-input-section {
+    margin-top: 20px;
+    font-family: 'Sora', sans-serif;
+}
+
+.fakemeebits-input {
+    width: 300px;
+    padding: 10px 15px 10px 15px; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Sora", sans-serif;
+    margin-bottom: 20px;
+}
+
+.fakemeebits-input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 5px #fff;
+}
+  
+  .fakemeebits-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .fakemeebits-button {
+    background-color: #D2A6ED;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Sora', sans-serif;
+  }
+  
+  .fakemeebits-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ea44fe, 0 0 20px #ea44fe;
+  }
+  
+  .fakemeebits-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .fakemeebits-button:disabled:hover {
+    box-shadow: 0 0 10px #ccc, 0 0 20px #ccc;
+  }
+  
