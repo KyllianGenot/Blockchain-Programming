@@ -1,8 +1,23 @@
 # ERC721-UX Project
 
+This guide explains how to set up and run the **ERC721-UX Project**, a React-based decentralized application (dApp) for interacting with ERC721 tokens deployed on the **Holesky Testnet**. The application enables users to visualize and manipulate tokens from **Fake BAYC**, **Fake Nefturians**, and **Fake Meebits** contracts.
+
+---
+
+## Live Demo
+
 **Live Demo**: [https://erc721-cmz0jimdv-kyllians-projects.vercel.app/](https://erc721-cmz0jimdv-kyllians-projects.vercel.app/)
 
-This guide explains how to set up and run the **ERC721-UX Project**, a React-based decentralized application (dApp) for interacting with ERC721 tokens deployed on the **Holesky Testnet**. The application enables users to visualize and manipulate tokens from **Fake BAYC**, **Fake Nefturians**, and **Fake Meebits** contracts.
+To access the live demo of the application, you need to be logged into a Vercel account. If you don't have one, you can create a free account on the Vercel platform.
+
+### How to access the demo:
+1. **Create a Vercel Account**:
+   - Go to [Vercel](https://vercel.com) and sign up for a free account if you don't have one.
+   - Log in to your Vercel account.
+
+2. **Access the Demo**:
+   - Once logged in, open the following link in your browser: [https://erc721-cmz0jimdv-kyllians-projects.vercel.app/](https://erc721-cmz0jimdv-kyllians-projects.vercel.app/)
+   - You will be able to explore the application online.
 
 ---
 
