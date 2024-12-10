@@ -15,9 +15,22 @@ This guide explains how to set up and run the **ERC20-TD project**, developed us
    - Ensure your wallet is funded with test ETH from the Holesky faucet.
 
 3. **Clone the Repository**  
-   Clone the repository to your local machine:
+   Use sparse checkout to clone only the required folder:
    ```bash
-   git clone <repository_url>
+   # Clone the repository with no checkout
+   git clone --no-checkout https://github.com/KyllianGenot/Blockchain-Programming.git
+   
+   # Navigate to the repository
+   cd Blockchain-Programming
+   
+   # Configure sparse checkout
+   git sparse-checkout init --cone
+   git sparse-checkout set ERC20-TD
+   
+   # Pull the specified folder
+   git checkout
+
+   # Navigate to the folder
    cd ERC20-TD
    ```
 
@@ -69,7 +82,7 @@ forge script script/deployToken.sol --fork-url http://localhost:8545 --broadcast
 #### Deployment to Holesky Testnet:
 Deploy the ERC20 token contract to the Holesky test network:
 ```bash
-forge script script/deployToken.sol --broadcast --rpc-url $RPC_URL
+forge script script/deployToken.sol --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
 ```
 
 ---
