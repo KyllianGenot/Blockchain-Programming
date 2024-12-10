@@ -1,70 +1,167 @@
-# Getting Started with Create React App
+# ERC721-UX Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Live Demo**: [https://erc721-cmz0jimdv-kyllians-projects.vercel.app/](https://erc721-cmz0jimdv-kyllians-projects.vercel.app/)
 
-## Available Scripts
+This guide explains how to set up and run the **ERC721-UX Project**, a React-based decentralized application (dApp) for interacting with ERC721 tokens deployed on the **Holesky Testnet**. The application enables users to visualize and manipulate tokens from **Fake BAYC**, **Fake Nefturians**, and **Fake Meebits** contracts.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Screenshot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="1426" alt="website" src="website.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features and Objectives
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Connect to Holesky Network**  
+   - Display ChainId, last block number, and connected wallet address.  
+   - Redirect to an error page if the user is not on Holesky.
 
-### `npm run build`
+2. **Fake BAYC**  
+   - View collection details: name and total supply.  
+   - Claim a new token.  
+   - View metadata (image and attributes) for a specific token ID.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Fake Nefturians**  
+   - View the minimum token price.  
+   - Buy a new token (requires payment).  
+   - View all tokens owned by a specific address with metadata.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Fake Meebits**  
+   - Select an unminted token ID.  
+   - Use signature data to claim a token via **Fake Meebits Claimer**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Node.js and npm**  
+   - Download and install Node.js: [Node.js Official Site](https://nodejs.org/).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Metamask Wallet**  
+   - Install Metamask: [Metamask Browser Extension](https://metamask.io/).  
+   - Switch to the **Holesky Testnet** and ensure you have test ETH.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Clone the Repository**  
+   Use sparse checkout to clone only the required folder `erc721-ux` from your repository:  
+   ```bash
+   # Clone the repository with no checkout
+   git clone --no-checkout https://github.com/KyllianGenot/Blockchain-Programming.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   # Navigate to the repository
+   cd Blockchain-Programming
 
-## Learn More
+   # Configure sparse checkout
+   git sparse-checkout init --cone
+   git sparse-checkout set erc721-ux
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   # Pull the specified folder
+   git checkout
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   # Navigate to the project folder
+   cd erc721-ux
+   ```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Structure
 
-### Analyzing the Bundle Size
+- **`public/`**: Static assets and images.  
+- **`src/abi/`**: ABIs for interacting with the ERC721 contracts.  
+- **`src/pages/`**: React pages:  
+   - `/chain-info`: Displays blockchain details.  
+   - `/fakeBayc`: Displays collection and minting functionality.  
+   - `/fakeBayc/{tokenId}`: Token metadata details.  
+   - `/fakeNefturians`: Buy tokens.  
+   - `/fakeNefturians/{userAddress}`: Tokens owned by a user.  
+   - `/fakeMeebits`: Mint tokens with signature-based functionality.  
+- **`src/components/`**: Reusable components.  
+- **`src/data/`**: Utility functions for smart contract interactions.  
+- **`App.js`**: Main React file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Setting Up the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 1. Install Dependencies
 
-### Advanced Configuration
+Run the following command in the project directory:  
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### 2. Run the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Start the React development server:  
+```bash
+npm start
+```
 
-### `npm run build` fails to minify
+The application will be available at **[http://localhost:3000](http://localhost:3000)**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## How It Works
+
+### Chain Info Page (`/chain-info`)
+- Connects to Metamask and fetches:
+   - Chain ID  
+   - Last block number  
+   - Connected user address  
+- Redirects to an error page if the user is not on Holesky.
+
+---
+
+### Fake BAYC
+
+#### `/fakeBayc`
+- Displays:
+   - Collection name  
+   - Total token count  
+- Allows claiming a new token.
+
+#### `/fakeBayc/{tokenId}`
+- Fetches and displays metadata for a specific token.  
+- Handles errors if the token does not exist.
+
+---
+
+### Fake Nefturians
+
+#### `/fakeNefturians`
+- Displays the minimum token price.  
+- Button to purchase a token (requires payment).
+
+#### `/fakeNefturians/{userAddress}`
+- Displays all token IDs owned by the specified address with metadata.
+
+---
+
+### Fake Meebits
+
+#### `/fakeMeebits`
+- Allows users to:
+   - Select an unminted token ID.  
+   - Use signature data to claim a token via **Fake Meebits Claimer**.
+
+---
+
+## Deployment
+
+To deploy your own version, run:  
+```bash
+vercel
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+By following this guide, you can successfully set up and run the **ERC721-UX Project** locally or explore the deployed version. For questions or improvements, open an issue on the repository.
