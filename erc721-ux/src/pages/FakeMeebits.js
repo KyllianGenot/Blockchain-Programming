@@ -3,7 +3,7 @@ import { BrowserProvider, Contract, parseEther } from "ethers";
 import fakeMeebitsClaimerData from "../abi/FakeMeebitsClaimer.json";
 import signatureData from "../data/output-sig.json";
 import PageWrapper from "../components/PageWrapper";
-import "./FakeMeebits.css"; // Import du CSS
+import "./FakeMeebits.css";
 
 const fakeMeebitsClaimerABI = fakeMeebitsClaimerData.abi;
 const claimerContractAddress = "0x9B6F990793347005bb8a252A67F0FA4d56521447";
@@ -145,7 +145,7 @@ const FakeMeebits = () => {
             <button
               onClick={claimToken}
               className="fakemeebits-button fakemeebits-claim-button"
-              disabled={loading || isClaimed === null}
+              disabled={loading || isClaimed === true || isClaimed === null}
             >
               {loading ? "Processing..." : "Claim Token"}
             </button>

@@ -1,6 +1,5 @@
-/* Glassmorphism styles for Chain Info page */
 .chain-info-container {
-    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -18,15 +17,14 @@
     font-size: 36px;
     color: #ffffff;
     font-family: 'Sora', sans-serif;
-    text-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
-/* Updated Button with Gradient, Glow, and Ripple Effect */
 .chain-info-button {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #d3b6e0, #b58ed2); /* Gradient background */
+    background: linear-gradient(135deg, #d3b6e0, #b58ed2);
     color: #fff;
     border: none;
     border-radius: 25px;
@@ -38,13 +36,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Glow effect on hover */
 .chain-info-button:hover {
-    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2; /* Gradient glow */
-    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2;
+    transform: translateY(-2px);
 }
 
-/* Ripple effect */
 .chain-info-button::after {
     content: "";
     position: absolute;
@@ -70,7 +66,6 @@
     }
 }
 
-/* Focus Accessibility */
 .chain-info-button:focus {
     outline: 2px solid #d2a6ed;
     outline-offset: 3px;
@@ -90,11 +85,10 @@
     font-size: 24px;
     margin-bottom: 15px;
     line-height: 1.6;
-    text-shadow: 0 0px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
     font-family: 'Sora', sans-serif;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .chain-info-container {
         padding: 20px;

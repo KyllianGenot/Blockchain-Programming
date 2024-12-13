@@ -1,42 +1,38 @@
-/* Error Container: Glassmorphism Style */
 .error-container {
-    background: rgba(255, 255, 255, 0.12); /* Softer transparency */
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 16px; /* Rounded corners */
+    border-radius: 16px;
     padding: 30px;
     max-width: 700px;
-    margin: 100px auto; /* Centered on the page */
+    margin: 100px auto;
     text-align: center;
     color: #fff;
     font-family: "Sora", sans-serif;
 }
 
-/* Title Styling */
 .error-title {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 18px;
-    color: #ffffff; /* White for clarity */
+    color: #ffffff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Message Styling */
 .error-message {
     font-size: 18px;
-    color: #C8D6E5; /* Softer blue shade */
+    color: #C8D6E5;
     margin-bottom: 28px;
     line-height: 1.5;
     font-family: "Sora", sans-serif;
 }
 
-/* Updated Button with Gradient, Glow, and Ripple Effect */
 .error-button {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #d3b6e0, #b58ed2); /* Gradient background */
+    background: linear-gradient(135deg, #d3b6e0, #b58ed2);
     color: #fff;
     border: none;
     border-radius: 25px;
@@ -48,13 +44,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Glow effect on hover */
 .error-button:hover {
-    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2; /* Gradient glow */
-    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2;
+    transform: translateY(-2px);
 }
 
-/* Ripple effect */
 .error-button::after {
     content: "";
     position: absolute;
@@ -80,7 +74,6 @@
     }
 }
 
-/* Focus Accessibility */
 .error-button:focus {
     outline: 2px solid #d2a6ed;
     outline-offset: 3px;

@@ -1,7 +1,6 @@
-//npm start
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import PageWrapper from "./components/PageWrapper"; // Wrapper global
+import PageWrapper from "./components/PageWrapper";
 import Home from "./pages/Home";
 import ChainInfo from "./pages/ChainInfo";
 import ErrorPage from "./pages/ErrorPage";
@@ -16,7 +15,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <PageWrapper> {/* PageWrapper appliqué globalement */}
+      <PageWrapper>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/chain-info" element={<ChainInfo />} />

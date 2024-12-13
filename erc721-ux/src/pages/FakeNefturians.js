@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { useNavigate } from "react-router-dom";
-import PageWrapper from "../components/PageWrapper"; // Assuming this exists
+import PageWrapper from "../components/PageWrapper";
 import fakeNefturiansData from "../abi/FakeNefturians.json";
-import "./FakeNefturians.css"; // Import the CSS
+import "./FakeNefturians.css";
 
 const fakeNefturiansABI = fakeNefturiansData.abi;
 const contractAddress = "0x92Da472BE336A517778B86D7982e5fde0C7993c1";
@@ -27,7 +27,7 @@ const FakeNefturians = () => {
         const contract = new ethers.Contract(contractAddress, fakeNefturiansABI, provider);
 
         const price = await contract.tokenPrice();
-        setTokenPrice(ethers.formatEther(price)); // Convert to ETH
+        setTokenPrice(ethers.formatEther(price));
       } catch (err) {
         console.error("Error fetching token price:", err.message);
         setError(err.message);
@@ -48,7 +48,7 @@ const FakeNefturians = () => {
       const signer = await provider.getSigner();
       const contract = new ethers.Contract(contractAddress, fakeNefturiansABI, signer);
 
-      const value = ethers.parseEther((parseFloat(tokenPrice) + 0.005).toFixed(2)); // Add margin
+      const value = ethers.parseEther((parseFloat(tokenPrice) + 0.005).toFixed(2));
       const tx = await contract.buyAToken({ value });
       await tx.wait();
 

@@ -1,12 +1,11 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./Header.css"; // Assure-toi d'importer ton CSS principal
+import "./Header.css";
 
 const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  // Logique pour déterminer le nom de l'onglet actif dans le menu déroulant
   const getDropdownLabel = () => {
     if (currentPath.startsWith("/fakeBayc")) {
       return "Fake BAYC";
@@ -22,15 +21,12 @@ const Header = () => {
     <header className="header glassmorphism">
       <div className="header-container">
         <nav className="nav">
-          {/* Home Link */}
           <Link
             to="/"
             className={`nav-link ${currentPath === "/" ? "active" : ""}`}
           >
             Home
           </Link>
-
-          {/* Chain Info Link */}
           <Link
             to="/chain-info"
             className={`nav-link ${
@@ -40,16 +36,14 @@ const Header = () => {
             Chain Info
           </Link>
 
-          {/* Dropdown Menu for NFT Explorer */}
           <div className="dropdown">
             <span
               className={`nav-link dropdown-toggle ${
                 currentPath.includes("/fake") ? "active" : ""
               }`}
             >
-              {getDropdownLabel()} {/* Texte dynamique */}
+              {getDropdownLabel()}
               <span className="dropdown-arrow">
-                {/* SVG pour la flèche */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="12"
@@ -58,7 +52,7 @@ const Header = () => {
                 >
                   <path
                     fill="currentColor"
-                    d="M12 16l6-6H6z" /* Triangle inversé vers le bas */
+                    d="M12 16l6-6H6z"
                   />
                 </svg>
               </span>

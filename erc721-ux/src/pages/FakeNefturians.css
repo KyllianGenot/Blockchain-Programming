@@ -1,6 +1,5 @@
-/* Container principal */
 .fakenefturians-container {
-    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -14,7 +13,6 @@
     font-family: "Sora", sans-serif;
 }
 
-/* Titre principal */
 .fakenefturians-title {
     font-size: 36px;
     font-weight: bold;
@@ -24,7 +22,6 @@
     font-family: 'Sora', sans-serif;
 }
 
-/* Messages d'erreur et de succès */
 .fakenefturians-error {
     color: #ff4d4d;
     font-size: 16px;
@@ -39,7 +36,6 @@
     font-family: 'Sora', sans-serif;
 }
 
-/* Informations du token */
 .fakenefturians-info {
     font-size: 20px;
     margin-bottom: 30px;
@@ -48,11 +44,10 @@
     font-family: 'Sora', sans-serif;
 }
 
-/* Updated Button with Gradient, Glow, and Ripple Effect */
 .fakenefturians-button {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #d3b6e0, #b58ed2); /* Gradient background */
+    background: linear-gradient(135deg, #d3b6e0, #b58ed2);
     color: #fff;
     border: none;
     border-radius: 25px;
@@ -64,13 +59,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Glow effect on hover */
 .fakenefturians-button:hover {
-    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2; /* Gradient glow */
-    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2;
+    transform: translateY(-2px);
 }
 
-/* Ripple effect */
 .fakenefturians-button::after {
     content: "";
     position: absolute;
@@ -96,13 +89,11 @@
     }
 }
 
-/* Focus Accessibility */
 .fakenefturians-button:focus {
     outline: 2px solid #d2a6ed;
     outline-offset: 3px;
 }
 
-/* Section de recherche */
 .fakenefturians-subtitle {
     margin-top: 40px;
     font-size: 24px;
@@ -135,7 +126,6 @@
     box-shadow: 0 0 5px #fff;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .fakenefturians-container {
         padding: 20px;

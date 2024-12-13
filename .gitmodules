@@ -16,3 +16,9 @@
 [submodule "ERC721-TD/lib/openzeppelin-contracts"]
 	path = ERC721-TD/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "ERC20-721-Ticketing/lib/forge-std"]
+	path = ERC20-721-Ticketing/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "ERC20-721-Ticketing/lib/openzeppelin-contracts"]
+	path = ERC20-721-Ticketing/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts

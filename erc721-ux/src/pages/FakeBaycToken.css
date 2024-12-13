@@ -1,4 +1,3 @@
-/* Container principal */
 .fakebayc-token-container {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -16,7 +15,6 @@
   font-family: 'Sora', sans-serif;
 }
 
-/* Image container */
 .image-container {
   flex: 1;
   display: flex;
@@ -32,7 +30,6 @@
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Information container */
 .info-container {
   flex: 1;
   display: flex;
@@ -52,7 +49,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   padding: 8px 12px;
-  font-size: clamp(14px, 1.2vw, 16px); /* Taille dynamique */
+  font-size: clamp(14px, 1.2vw, 16px);
   font-weight: 500;
   color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -68,11 +65,11 @@
 }
 
 .attribute-item:hover strong {
-  color: #ffffff; /* Le texte en strong devient blanc */
+  color: #ffffff;
 }
 
 .owner {
-  font-size: clamp(14px, 1.2vw, 16px); /* Taille dynamique */
+  font-size: clamp(14px, 1.2vw, 16px);
   color: #e7e7e7;
   font-weight: 400;
   margin-top: auto;
@@ -81,7 +78,6 @@
   font-family: 'Sora', sans-serif;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .fakebayc-token-container {
     flex-direction: column;

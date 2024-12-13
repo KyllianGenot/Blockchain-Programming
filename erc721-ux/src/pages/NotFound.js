@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import PageWrapper from "../components/PageWrapper";
-import "./NotFound.css"; // Link to the CSS file
+import "./NotFound.css";
 
 const NotFound = () => {
   const navigate = useNavigate();

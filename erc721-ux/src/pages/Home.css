@@ -1,6 +1,5 @@
-/* Glassmorphism styles */
 .home-container {
-    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -14,16 +13,14 @@
     font-family: "Sora", sans-serif;
   }
   
-  /* Titre principal */
   .home-title {
     font-size: 36px;
     color: #ffffff;
     font-family: 'Sora', sans-serif;
-    text-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
   }
   
-  /* Paragraphe */
   .home-description {
     font-size: 16px;
     color: var(--text-lv2-color, #ffffff);
@@ -32,7 +29,6 @@
     font-family: 'Sora', sans-serif;
   }
   
-  /* Liste des fonctionnalités */
   .home-list {
     text-align: left;
     margin: 20px auto;
@@ -47,14 +43,12 @@
     font-family: 'Sora', sans-serif;
   }
   
-  /* Texte mis en valeur */
   strong {
     color: var(--secondary-color, #A6C1ED);
     font-weight: 600;
     font-family: 'Sora', sans-serif;
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .home-container {
       padding: 20px;

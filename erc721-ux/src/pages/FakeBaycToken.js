@@ -1,25 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ethers } from "ethers";
-import PageWrapper from "../components/PageWrapper"; // Import PageWrapper
+import PageWrapper from "../components/PageWrapper";
 import fakeBaycData from "../abi/FakeBayc.json";
-import "./FakeBaycToken.css"; // Import the CSS
+import "./FakeBaycToken.css";
 
 const fakeBaycABI = fakeBaycData.abi;
 const contractAddress = "0xdecFAB04fb08cC5da6365C18B26A6B9b1D4BEDFE";
+
+const ipfsGateways = [
+  "https://gateway.pinata.cloud/ipfs/",
+  "https://ipfs.io/ipfs/",
+  "https://cloudflare-ipfs.com/ipfs/",
+];
+
+const ipfsToHttp = async (url) => {
+  if (!url.startsWith("ipfs://")) return url;
+
+  const cid = url.replace("ipfs://", "");
+  for (let gateway of ipfsGateways) {
+    const testUrl = `${gateway}${cid}`;
+    try {
+      const response = await fetch(testUrl, { method: "HEAD" });
+      if (response.ok) return testUrl;
+    } catch (error) {
+      console.warn(`Gateway failed: ${gateway}`, error);
+    }
+  }
+  throw new Error("All IPFS gateways failed.");
+};
 
 const FakeBaycToken = () => {
   const { tokenId } = useParams();
   const [tokenData, setTokenData] = useState(null);
   const [ownerAddress, setOwnerAddress] = useState("Loading...");
   const [error, setError] = useState(null);
-
-  const ipfsToHttp = (url) => {
-    if (url.startsWith("ipfs://")) {
-      return url.replace("ipfs://", "https://gateway.pinata.cloud/ipfs/");
-    }
-    return url;
-  };
 
   useEffect(() => {
     const fetchTokenData = async () => {
@@ -39,9 +54,13 @@ const FakeBaycToken = () => {
         }
 
         const tokenURI = await contract.tokenURI(tokenId);
-        const response = await fetch(tokenURI);
+        const resolvedTokenURI = await ipfsToHttp(tokenURI);
+
+        const response = await fetch(resolvedTokenURI);
         const metadata = await response.json();
-        metadata.image = ipfsToHttp(metadata.image);
+        const resolvedImage = await ipfsToHttp(metadata.image);
+        metadata.image = resolvedImage;
+
         setTokenData(metadata);
 
         const owner = await contract.ownerOf(tokenId);
@@ -77,7 +96,6 @@ const FakeBaycToken = () => {
   return (
     <PageWrapper>
       <div className="fakebayc-token-container">
-        {/* Image Container */}
         <div className="image-container">
           <img
             src={tokenData.image}
@@ -86,7 +104,6 @@ const FakeBaycToken = () => {
           />
         </div>
 
-        {/* Information Container */}
         <div className="info-container">
           <div className="text-wrapper">
             <h1 className="fakebayc-title">Fake BAYC Token #{tokenId}</h1>

@@ -1,6 +1,5 @@
-/* Container: Glassmorphism effect with updated styling */
 .notfound-container {
-    background: rgba(255, 255, 255, 0.12); /* Softer transparency */
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -14,7 +13,6 @@
     font-family: "Sora", sans-serif;
 }
 
-/* Title */
 .notfound-title {
     font-size: 32px;
     font-weight: 600;
@@ -22,19 +20,17 @@
     color: #ffffff;
 }
 
-/* Message */
 .notfound-message {
     font-size: 18px;
-    color: #C8D6E5; /* Softer blue shade */
+    color: #C8D6E5;
     margin-bottom: 28px;
     line-height: 1.5;
 }
 
-/* Button: Combined Gradient, Glow, and Ripple Effect */
 .notfound-button {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #d3b6e0, #b58ed2); /* Gradient background */
+    background: linear-gradient(135deg, #d3b6e0, #b58ed2);
     color: #fff;
     border: none;
     border-radius: 25px;
@@ -46,13 +42,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Glow effect on hover */
 .notfound-button:hover {
-    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2; /* Gradient glow */
-    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 0 12px #c9a8e5, 0 0 24px #b58ed2;
+    transform: translateY(-2px);
 }
 
-/* Ripple effect */
 .notfound-button::after {
     content: "";
     position: absolute;
@@ -78,13 +72,11 @@
     }
 }
 
-/* Focus Accessibility */
 .notfound-button:focus {
     outline: 2px solid #d2a6ed;
     outline-offset: 3px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .notfound-container {
         padding: 20px;

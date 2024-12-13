@@ -1,6 +1,6 @@
 import React from "react";
 import PageWrapper from "../components/PageWrapper";
-import "./Home.css"; // Importation des styles locaux
+import "./Home.css";
 
 const Home = () => {
   return (

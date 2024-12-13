@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Header styling */
 .header {
-    background-color: #151518; /* Solid modern luxurious dark color */
+    background-color: #151518;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +10,6 @@
     padding: 10px 0;
 }
 
-/* Container for header content */
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,38 +19,33 @@
     padding: 0 20px;
 }
 
-/* Navigation styling */
 .nav {
     display: flex;
     justify-content: space-around;
     gap: 30px;
 }
 
-/* Links */
 .nav-link {
     text-decoration: none;
-    color: #ccc; /* Light gray color */
+    color: #ccc;
     font-size: 1.1rem;
     font-weight: 500;
     padding: 8px 12px;
     transition: color 0.3s ease, transform 0.2s ease;
-    position: relative; /* To position pseudo-elements */
+    position: relative;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
 }
 
-/* Hover effect */
 .nav-link:hover {
-    color: #fff; /* Bright white on hover */
-    transform: translateY(-2px); /* Slight lift */
+    color: #fff;
+    transform: translateY(-2px);
 }
 
-/* Active link */
 .nav-link.active {
-    color: #A6C1ED; /* Light blue color for active link */
+    color: #A6C1ED;
 }
 
-/* Active and Hover underline effect */
 .nav-link::after {
     content: "";
     position: absolute;
@@ -60,49 +53,45 @@
     bottom: -3px;
     width: 0;
     height: 2px;
-    background: #A6C1ED; /* Blue underline */
+    background: #A6C1ED;
     transition: width 0.3s ease;
 }
 
 .nav-link.active::after,
 .nav-link:hover::after {
-    width: 100%; /* Underline grows on hover or active */
+    width: 100%;
 }
 
-/* Dropdown menu styling */
 .dropdown {
     position: relative;
-    display: inline-block; /* Align with other links */
+    display: inline-block;
 }
 
 .dropdown > .nav-link {
-    padding: 8px 12px; /* Same as other links */
+    padding: 8px 12px;
     display: inline-block;
     font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
 }
 
-/* Flèche dans le menu déroulant */
 .dropdown-arrow svg {
     display: inline-block;
-    margin-left: 5px; /* Espacement entre le texte et la flèche */
+    margin-left: 5px;
     width: 12px;
     height: 12px;
-    transition: transform 0.3s ease; /* Transition douce pour la rotation */
-    fill: currentColor; /* Hérite de la couleur du texte */
+    transition: transform 0.3s ease;
+    fill: currentColor;
 }
 
-/* Rotation de la flèche lorsque le menu est en hover */
 .dropdown:hover .dropdown-arrow svg {
     transform: rotate(180deg);
 }
 
-/* Dropdown menu */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* Align below the parent */
+    top: 100%;
     left: 0;
     background-color: #151518;
     border-radius: 4px;
@@ -121,7 +110,7 @@
 }
 
 .dropdown-menu a:hover {
-    background-color: #222; /* Slightly lighter hover */
+    background-color: #222;
     color: #fff;
 }
 
@@ -129,7 +118,6 @@
     display: block;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
