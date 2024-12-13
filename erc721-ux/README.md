@@ -6,7 +6,7 @@ This guide explains how to set up and run the **ERC721-UX Project**, a React-bas
 
 ## Live Demo
 
-**Live Demo**: [https://erc721-cmz0jimdv-kyllians-projects.vercel.app/](https://erc721-cmz0jimdv-kyllians-projects.vercel.app/)
+**Live Demo**: [https://erc721-h6og9b7t9-kyllians-projects.vercel.app/](https://erc721-h6og9b7t9-kyllians-projects.vercel.app/)
 
 ---
 
