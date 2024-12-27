@@ -1,0 +1,105 @@
+/* NavBar.css */
+@import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&display=swap');
+
+/* Conteneur principal de la barre de navigation */
+.navbar {
+    background-color: #6D4C41; /* Mocha Mousse */
+    color: #FAF5E9; /* Beige ivoire */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet de profondeur */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Toujours visible au-dessus des autres éléments */
+}
+  
+/* Logo */
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-logo span {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    color: #FAF5E9; /* Beige ivoire pour contraste */
+}
+  
+/* Navigation links */
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+}
+  
+.navbar-links a {
+    color: #D7C9C0; /* Mocha clair */
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+  
+.navbar-links a:hover {
+    color: #FAF5E9; /* Beige ivoire au survol */
+}
+  
+.navbar-links a.active {
+    color: #FFF; /* Blanc pour le lien actif */
+    font-weight: bold;
+    border-bottom: 2px solid #FFF; /* Indicateur de lien actif */
+    padding-bottom: 2px;
+}
+  
+/* Bouton du menu hamburger pour mobile */
+.navbar-menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #FAF5E9; /* Beige ivoire */
+}
+  
+/* Styles pour le menu mobile */
+.navbar-links-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #6D4C41; /* Mocha Mousse */
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.navbar-links-mobile a {
+    text-align: center;
+    padding: 0.5rem 0;
+    color: #D7C9C0; /* Mocha clair */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+  
+.navbar-links-mobile a:hover {
+    background-color: #4B2C22; /* Couleur sombre de Mocha Mousse */
+    color: #FFF;
+}
+  
+/* Réactivité */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Cache les liens de navigation sur mobile */
+    }
+  
+    .navbar-menu-icon {
+        display: block; /* Affiche le menu hamburger */
+    }
+  
+    .navbar-links-mobile {
+        display: flex; /* Affiche le menu mobile */
+    }
+}

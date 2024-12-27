@@ -1,0 +1,263 @@
+/* Global reset for margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&display=swap');
+
+@font-face {
+  font-family: 'Violet Sans'; /* Nom personnalisé de la police */
+  src: url('../assets/fonts/VioletSans-Regular.woff2') format('woff2');
+  font-weight: normal; /* Poids de la police */
+  font-style: normal; /* Style de la police */
+}
+
+body, html {
+  background: url('../assets/images/background.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #FAF5E9; /* Couleur de secours */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Violet Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* General body styling */
+body {
+  background-color: #f4f4f9;
+  color: #323232;
+  line-height: 1.6;
+}
+
+* {
+  font-family: 'Violet Sans', Arial, sans-serif !important;
+}
+
+/* Links */
+a {
+  color: #6D4C41;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #4B2C22;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Page Layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: #6D4C41;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+.glass-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+  text-align: center;
+  height: 100%; /* Prend tout l'espace disponible */
+}
+
+/* Forms */
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #B6E1E7;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6D4C41;
+  outline: none;
+  box-shadow: 0 0 5px rgba(109, 76, 65, 0.5);
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Glass morphism cards with images and rotation */
+.glass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.glass {
+  position: relative;
+  width: 450px;
+  height: 400px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 16px;
+  padding: 0 0 1rem 0;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.glass:hover {
+  transform: rotate(0deg) translateY(-10px);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
+}
+
+.glass img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.glass .glass-content {
+  text-align: center;
+  color: #fff;
+  padding-top: 1rem;
+  margin: 15px;
+}
+
+.glass .glass-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.glass .glass-content p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #A98274;
+}
+
+.glass a {
+  text-decoration: none;
+}
+
+.shared-button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #6D4C41;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.shared-button:hover {
+  border-color: #fff9;
+}
+
+.shared-button:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+.shared-button:hover:before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #6D4C41;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
