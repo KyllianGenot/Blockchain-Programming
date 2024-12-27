@@ -1,6 +1,6 @@
 # ERC20-721-Ticketing Project
 
-This guide explains how to set up and run the **ERC20-721-Ticketing Project**, a decentralized application (dApp) with smart contracts and a web interface. The project is developed using **Foundry** and **React** to manage ticketing for concerts, including creating artist and venue profiles, emitting tickets, and handling ticket sales.
+This guide explains how to set up and run the **ERC20-721-Ticketing Project**, a decentralized application (dApp) with smart contracts and a web interface. The project is developed using **Foundry** and **React** to manage ticketing for concerts, including creating artist and venue profiles, emitting tickets, and handling ticket sales. 
 
 ---
 
