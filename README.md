@@ -48,7 +48,31 @@ Refer to the detailed [ERC20-223-721-TD Guide](./ERC20-223-721-TD/README.md) for
 
 ---
 
-### 3. **ERC721-TD: Development of an ERC721 Token**
+### 3. **ERC20-721-Ticketing Project**
+
+This project combines the development of ERC20 and ERC721 smart contracts with a React-based web interface for managing a ticketing system for concerts. It focuses on creating artist and venue profiles, managing ticket emission and sales, and handling post-concert revenue distribution.
+
+#### Features:
+- Create and modify artist profiles with attributes such as name, type, and total tickets sold.
+- Define venue profiles, including available space and revenue percentage.
+- Enable concert creation, with validation by artists and venues before the concert.
+- Implement ticket emission, usage, and transfer functionality.
+- Ensure secure and fair trading of tickets (cannot be sold for more than the purchase price).
+- Allow artists to cash out revenue post-concert, with automatic revenue splitting between artist and venue.
+
+📁 Folder: `ERC20-721-Ticketing`
+- **`frontend/`**: React-based frontend for interacting with the contracts.
+- **`script/Deploy.s.sol`**: Deployment script for all contracts.
+- **`src/ContractERC20.sol`**: ERC20 token implementation for fungible payments.
+- **`src/TicketingSystem.sol`**: ERC721 token implementation for non-fungible ticket representation.
+- **`test/ContractExchange.t.sol`**: Test cases for token trading and validation.
+- **`test/TicketingSystem.t.sol`**: Test cases for ticket emission, redemption, and revenue management.
+
+Refer to the detailed [ERC20-721-Ticketing Guide](./ERC20-721-Ticketing/README.md) for setup and execution.
+
+---
+
+### 4. **ERC721-TD: Development of an ERC721 Token**
 
 This project focuses on developing and deploying a custom ERC721 non-fungible token contract.
 
@@ -68,7 +92,7 @@ Refer to the detailed [ERC721-TD Guide](./ERC721-TD/README.md) for setup and exe
 
 ---
 
-### 4. **ERC721-UX: ERC721 Token Visualization and Manipulation**
+### 5. **ERC721-UX: ERC721 Token Visualization and Manipulation**
 
 This project involves building a user-friendly React-based dApp for interacting with ERC721 tokens deployed on the **Holesky Testnet**. The application allows users to visualize and manipulate ERC721 tokens from **Fake BAYC**, **Fake Nefturians**, and **Fake Meebits** contracts.
 
