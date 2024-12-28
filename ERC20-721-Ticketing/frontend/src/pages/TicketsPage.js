@@ -141,42 +141,43 @@ const TicketsPage = ({ provider, signer, account }) => {
   };
 
   // Approve ERC20 tokens before purchase
-const approveERC20 = async () => {
-  try {
-    if (!price || !price.erc20) {
-      setErrorMessage("Unable to approve tokens. Please select a valid concert and try again.");
-      return;
+  const approveERC20 = async () => {
+    try {
+      if (!price || !price.erc20) {
+        setErrorMessage("Unable to approve tokens. Please select a valid concert and try again.");
+        return;
+      }
+
+      setIsLoading(true);
+      setErrorMessage("");
+      setSuccessMessage("");
+
+      const erc20Contract = new Contract(
+        CONTRACT_ADDRESSES.ContractERC20,
+        ABIS.ContractERC20,
+        signer
+      );
+
+      const erc20price = parseEther(price.erc20);
+      const plusone = parseEther("1");
+      const amountToApprove = erc20price+plusone;
+
+      const tx = await erc20Contract.approve(
+        CONTRACT_ADDRESSES.ContractExchange,
+        amountToApprove
+      );
+      await tx.wait();
+
+      setSuccessMessage(
+        `Approval successful! You can now purchase a ticket with ERC20. Amount approved: ${formatEther(amountToApprove)} ERC20`
+      );
+    } catch (error) {
+      console.error("Error approving tokens:", error.message);
+      setErrorMessage("Unable to approve ERC20 tokens. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
-
-    setIsLoading(true);
-    setErrorMessage("");
-    setSuccessMessage("");
-
-    const erc20Contract = new Contract(
-      CONTRACT_ADDRESSES.ContractERC20,
-      ABIS.ContractERC20,
-      signer
-    );
-
-    const amountToApprove = parseEther(price.erc20); // Convert ERC20 price to Wei
-
-    const tx = await erc20Contract.approve(
-      CONTRACT_ADDRESSES.ContractExchange,
-      amountToApprove
-    );
-    await tx.wait();
-
-    setSuccessMessage(
-      `Approval successful! You can now purchase a ticket with ERC20. Amount approved: ${price.erc20} ERC20`
-    );
-  } catch (error) {
-    console.error("Error approving tokens:", error.message);
-    setErrorMessage("Unable to approve ERC20 tokens. Please try again.");
-  } finally {
-    setIsLoading(false);
-  }
-};
-
+  };
 
   return (
     <Box p={4}>
@@ -194,9 +195,9 @@ const approveERC20 = async () => {
             <CircularProgress />
           </Box>
         ) : tickets.length > 0 ? (
-          tickets.map((ticket) => (
+          tickets.map((ticket, index) => (
             <Box
-              key={ticket.id}
+              key={`${ticket.id}-${index}`}
               display="flex"
               flexDirection="column"
               bgcolor="background.paper"
